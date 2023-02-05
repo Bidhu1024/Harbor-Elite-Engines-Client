@@ -7,14 +7,14 @@ import BikeBox from './BikeBox';
 import CarBox from "./CarBox";
 import EVBox from './EVBox';
 import Recommendations from "./Recommendations";
-
+import Footer from './Footer'
 const Dashboard = () => {
   return (
     <Stack sx={{ width: "100%" }}>
       <Box
         sx={{
           width: "99%",
-          border: "1px solid black",
+
           height: "15rem",
           marginTop: "1rem",
           display: "flex",
@@ -24,7 +24,7 @@ const Dashboard = () => {
         <Box
           sx={{
             width: "47%",
-            border: "1px solid black",
+     
             height: "15rem",
             backgroundImage: { bgimg },
           }}
@@ -61,12 +61,12 @@ const Dashboard = () => {
         <Box
           sx={{
             width: "47%",
-            border: "1px solid black",
+           
             height: "15rem",
             marginLeft: "4rem",
           }}
         >
-          {" "}
+   
           <UpperRightBoxVideo />
         </Box>
       </Box>
@@ -80,6 +80,9 @@ const Dashboard = () => {
       <Box>
         Recommendations 
         <Recommendations/>
+      </Box>
+      <Box>
+        <Footer></Footer>
       </Box>
     </Stack>
   );
