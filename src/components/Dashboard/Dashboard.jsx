@@ -1,6 +1,12 @@
 import { Stack, Box, Typography } from "@mui/material";
 import React from "react";
 import Logo from "../../Assets/Logo.png";
+import bgimg from "../../Assets/bgimg.jpg";
+import UpperRightBoxVideo from "./UpperRightBoxVideo";
+import BikeBox from './BikeBox';
+import CarBox from "./CarBox";
+import EVBox from './EVBox';
+import Recommendations from "./Recommendations";
 
 const Dashboard = () => {
   return (
@@ -20,19 +26,36 @@ const Dashboard = () => {
             width: "47%",
             border: "1px solid black",
             height: "15rem",
-            display: "flex",
+            backgroundImage: { bgimg },
           }}
         >
-          <img
-            src={Logo}
-            alt="Logo"
-            style={{ height: "4rem", width: "8rem" }}
-          />
-          <Typography
-            sx={{ fontSize: "1.2rem", fontWeight: "bold", marginTop: "1.2rem" }}
-          >
-            Elite Engines
-          </Typography>
+          <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
+            <img
+              src={Logo}
+              alt="Logo"
+              style={{ height: "4rem", width: "8rem" }}
+            />
+            <Typography
+              sx={{
+                fontSize: "1.2rem",
+                fontWeight: "bold",
+                marginTop: "1.2rem",
+              }}
+            >
+              Elite Engines
+            </Typography>
+          </Box>
+
+          <Box sx={{ marginTop: ".6rem", marginLeft: "1rem" }}>
+            <Typography sx={{ fontSize: "1.25rem", fontWeight: "bolder" }}>
+              About Harbor
+            </Typography>
+            <Typography>
+              Harbor is an fictional character from Valorant and a fierce
+              Warrior. As his name suggest our Website which includes
+              information about Bikes and Cars and accurate and fair.
+            </Typography>
+          </Box>
         </Box>
 
         <Box
@@ -42,7 +65,21 @@ const Dashboard = () => {
             height: "15rem",
             marginLeft: "4rem",
           }}
-        ></Box>
+        >
+          {" "}
+          <UpperRightBoxVideo />
+        </Box>
+      </Box>
+
+      <Box sx={{ height: "20rem", width: "100%", display:'flex', justifyContent:'space-between', marginTop:'.4rem' }}>
+        <Box sx={{width:'30%', backgroundColor:'rgba(238,238,228, 0.9)', padding:'.5rem'}}><BikeBox/></Box>
+        <Box sx={{width:'30%'}}><CarBox/></Box>
+        <Box sx={{width:'30%'}}><EVBox/></Box>
+      </Box>
+
+      <Box>
+        Recommendations 
+        <Recommendations/>
       </Box>
     </Stack>
   );
