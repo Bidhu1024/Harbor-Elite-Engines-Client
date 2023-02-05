@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Recommendations = () => {
-  return (
-    <div>Recommendations</div>
-  )
-}
+  return <div>Changes</div>;
+};
 
-export default Recommendations
+export default Recommendations;
