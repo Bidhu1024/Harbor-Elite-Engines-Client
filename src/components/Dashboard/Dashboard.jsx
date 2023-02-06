@@ -3,11 +3,11 @@ import React from "react";
 import Logo from "../../Assets/Logo.png";
 import bgimg from "../../Assets/bgimg.jpg";
 import UpperRightBoxVideo from "./UpperRightBoxVideo";
-import BikeBox from './BikeBox';
+import BikeBox from "./BikeBox";
 import CarBox from "./CarBox";
-import EVBox from './EVBox';
+import EVBox from "./EVBox";
 import Recommendations from "./Recommendations";
-import Footer from './Footer'
+import Footer from "./Footer";
 const Dashboard = () => {
   return (
     <Stack sx={{ width: "100%" }}>
@@ -24,7 +24,7 @@ const Dashboard = () => {
         <Box
           sx={{
             width: "47%",
-     
+
             height: "15rem",
             backgroundImage: { bgimg },
           }}
@@ -61,28 +61,54 @@ const Dashboard = () => {
         <Box
           sx={{
             width: "47%",
-           
+
             height: "15rem",
             marginLeft: "4rem",
           }}
         >
-   
           <UpperRightBoxVideo />
         </Box>
       </Box>
 
-      <Box sx={{ height: "20rem", width: "100%", display:'flex', justifyContent:'space-between', marginTop:'.4rem' }}>
-        <Box sx={{width:'30%', backgroundColor:'rgba(238,238,228, 0.9)', padding:'.5rem'}}><BikeBox/></Box>
-        <Box sx={{width:'30%'}}><CarBox/></Box>
-        <Box sx={{width:'30%'}}><EVBox/></Box>
+      <Box
+        sx={{
+          height: "20rem",
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          marginTop: ".4rem",
+        }}
+      >
+        <Box
+          sx={{
+            width: "30%",
+            backgroundColor: "rgba(238,238,228, 0.9)",
+            padding: ".5rem",
+          }}
+        >
+          <BikeBox />
+        </Box>
+        <Box sx={{ width: "30%" }}>
+          <CarBox />
+        </Box>
+        <Box sx={{ width: "30%" }}>
+          <EVBox />
+        </Box>
       </Box>
 
       <Box>
-        Recommendations 
-        <Recommendations/>
+        Recommendations
+        <Recommendations />
       </Box>
       <Box>
-        <Footer></Footer>
+      <Typography
+          sx={{ fontSize: "1.2rem", color: "blue", fontWeight: "bold", marginLeft:'3rem'}}
+        >
+          Creators
+        </Typography>
+        <Footer>
+      
+        </Footer>
       </Box>
     </Stack>
   );
