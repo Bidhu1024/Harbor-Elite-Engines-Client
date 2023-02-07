@@ -32,7 +32,6 @@ const Ashu = () => {
             href=" https://www.linkedin.com/in/asutosh-acharya-40b591228/"
             target="_blank"
           >
-            {" "}
             Go to LinkedIn
           </a>
         </Typography>
