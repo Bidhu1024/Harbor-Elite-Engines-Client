@@ -4,6 +4,7 @@ import AllBikes from "./components/AllBikes/AllBikes";
 import Contact from "./components/Contact";
 
 import Dashboard from "./components/Dashboard/Dashboard";
+import Yamaha from './components/BikesBrands/Yamaha';
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +13,7 @@ function App() {
         <Route path="/allbikes" element={<AllBikes />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path={`/allbikes/:id`} element={<Yamaha />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,5 +1,7 @@
 import { Box, Stack } from "@mui/material";
 import React from "react";
+import { useNavigate } from 'react-router-dom';
+
 
 const BikeBrands = () => {
   const AllBike = [
@@ -59,6 +61,10 @@ const BikeBrands = () => {
       origin: "India",
     },
   ];
+const nav = useNavigate()
+const handleBike =(id)=>{
+nav(`/allbikes/${id}`)
+}
   return (
     <Box
       sx={{
@@ -87,6 +93,8 @@ const BikeBrands = () => {
                 transform:'scaleY(1.1)'
               }
             }}
+
+            onClick={()=>{handleBike(bike.id)}}
           ></Box>
         );
       })}
