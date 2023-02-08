@@ -7,35 +7,55 @@ const BikeBrands = () => {
       id: 1,
       name: "Royal Enfield",
       image:
-        "https://www.google.com/url?sa=i&url=http%3A%2F%2Ft0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcTG0k2DdZwPjNtr6Bl-IdUFNY79Ce7eGvwz7FKe8ZoO5EuyaIwv&psig=AOvVaw1MbGtt3yHbWcRX4OUr1wE-&ust=1675787169653000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJD5_e6ngf0CFQAAAAAdAAAAABAH",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEvpE32OzpugPbkDd1QE7Je4OM0-mNMeemBY7lGto&s",
       origin: "India",
     },
     {
       id: 2,
       name: "Yamaha",
       image:
-        "https://logos-world.net/yamaha-https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fdjcheo1708%2Fyamaha-logo%2F&psig=AOvVaw3uPWPVL0_6yb_FEg-B-eDL&ust=1675787247235000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCLCIvpOogf0CFQAAAAAdAAAAABAJ/",
+        "https://logos-world.net/wp-content/uploads/2020/10/Yamaha-Logo.png",
       origin: "Japan",
     },
     {
       id: 3,
       name: "TVS",
-      image:
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2F1000logos.net%2Ftvs-motor-logo%2F&psig=AOvVaw2E3Vab-BeOd4ePdn6W6D9P&ust=1675787372569000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCJjIns-ogf0CFQAAAAAdAAAAABAE",
+      image: "https://m.media-amazon.com/images/I/71MyxHA8moL._SL1500_.jpg",
       origin: "India",
     },
     {
       id: 4,
       name: "Suzuki",
       image:
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ASuzuki_logo_2.svg&psig=AOvVaw2HGfRDh7_5nWLagP3-iZwH&ust=1675787411832000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCJiM-eGogf0CFQAAAAAdAAAAABAE",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Suzuki_logo_2.svg/2560px-Suzuki_logo_2.svg.png",
       origin: "India",
     },
     {
       id: 5,
       name: "Honda",
       image:
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3AHonda_Logo.svg&psig=AOvVaw2DwIlld7gFN1yluE4qSRJY&ust=1675787323561000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIj2jbmogf0CFQAAAAAdAAAAABAL",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Honda_Logo.svg/2552px-Honda_Logo.svg.png",
+      origin: "India",
+    },
+    {
+      id: 6,
+      name: "BMW",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWxRhW9cUG0nwf6iCNKhaVvBzd6G4nQaXsdnJRpsR-3w&s",
+      origin: "India",
+    },
+    {
+      id: 7,
+      name: "Bajaj",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Bajaj_Auto_Ltd_logo.svg/1200px-Bajaj_Auto_Ltd_logo.svg.png",
+      origin: "India",
+    },
+    {
+      id: 8,
+      name: "KTM",
+      image:
+        "https://thumbs.dreamstime.com/b/logo-ktm-logo-ktm-bike-color-vector-format-aviable-ai-132135826.jpg",
       origin: "India",
     },
   ];
@@ -44,17 +64,30 @@ const BikeBrands = () => {
       sx={{
         display: "flex",
         width: "100%",
-        justifyContent: "space-around",
-        alignItems: "center",
-        padding: "10px",
-        boxShadow: "0px 0px 8px rgba(0,0,0,0.5)",
+        flexDirection: "row",
+        RowGap: "10px",
+        columnGap: "10px",
+        padding: "2px",
+        flexWrap: "wrap",
+        justifyContent: "space-between",
       }}
     >
-      {AllBike.map((bike) => {
+      {AllBike.map((bike, index) => {
         return (
-          <Stack sx={{ cursor: "pointer", padding: "10px", gap: "10px" }}>
-            <Box component="img" src={bike.image}></Box>
-          </Stack>
+          <Box
+            component="img"
+            src={bike.image}
+            key={bike.id}
+            sx={{
+              cursor: "pointer",
+              height: "10rem",
+              marginTop:'.6rem',
+              width: "20%",
+              "&:hover":{
+                transform:'scaleY(1.1)'
+              }
+            }}
+          ></Box>
         );
       })}
     </Box>

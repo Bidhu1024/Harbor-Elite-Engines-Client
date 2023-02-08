@@ -8,10 +8,10 @@ import BikeBrands from './BikeBrands';
 const AllBikes = () => {
  
   return (
-    <Box>
+    <Box sx={{width:'100%', backgroundColor:'#ede2c5'}}>
 <BikeNavbar />
 <BikeDesc />
-<Box sx={{mt:'1.5rem'}}>
+<Box sx={{mt:'1.5rem', fontSize:'1.5rem', fontWeight:'700' }}>
   All Categories
 </Box>
 <BikeBrands/>

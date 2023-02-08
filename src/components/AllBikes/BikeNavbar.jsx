@@ -1,8 +1,17 @@
 import { Box } from "@mui/material";
 import React from "react";
 import { Typography } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 
 const BikeNavbar = () => {
+  const nav = useNavigate();
+  const handleAbout =()=>{
+   
+    nav("/about");
+  }
+  const handleContact =()=>{
+    nav('/contact')
+  }
   return (
     <Box
       sx={{
@@ -27,10 +36,10 @@ const BikeNavbar = () => {
         <Box>
           <Typography>MENU</Typography>
         </Box>{" "}
-        <Box>
+        <Box sx={{cursor:'pointer'}} onClick={handleContact}>
           <Typography>CONTACT</Typography>
         </Box>{" "}
-        <Box>
+        <Box onClick={handleAbout} sx={{cursor:'pointer'}}>
           <Typography>ABOUT</Typography>
         </Box>
       </Box>
