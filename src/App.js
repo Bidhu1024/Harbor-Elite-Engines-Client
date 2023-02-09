@@ -13,7 +13,7 @@ function App() {
         <Route path="/allbikes" element={<AllBikes />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path={`/allbikes/:id`} element={<Yamaha />} />
+        <Route path={`/allbikes/2`} element={<Yamaha />} />
       </Routes>
     </BrowserRouter>
   );

@@ -78,7 +78,7 @@ nav(`/allbikes/${id}`)
         justifyContent: "space-between",
       }}
     >
-      {AllBike.map((bike, index) => {
+      {AllBike.map((bike,id) => {
         return (
           <Box
             component="img"
