@@ -10,7 +10,7 @@ const About = () => {
       sorts of items from the black market and return them to their rightful
       owners, Batra was regarded as a kind-hearted man but also a deadly force
       to deal with in combat. His dedication to the cause through years of
-      service fighting criminals earned him a reputation as a hero and a legend.
+      service fighting criminals earned him a reputation as a hero and a legend
     </Box>
   );
 };
