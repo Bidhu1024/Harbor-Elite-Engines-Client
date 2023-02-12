@@ -1,8 +1,8 @@
-import React from 'react'
-import { Stack, Typography, Box } from "@mui/material";
-import BikeNavbar from './BikeNavbar';
-import BikeDesc from './BikeDesc';
+import { Box } from "@mui/material";
+import React from 'react';
 import BikeBrands from './BikeBrands';
+import BikeDesc from './BikeDesc';
+import BikeNavbar from './BikeNavbar';
 
 
 const AllBikes = () => {

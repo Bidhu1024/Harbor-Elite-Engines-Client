@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./components/About";
 import AllBikes from "./components/AllBikes/AllBikes";
 import Contact from "./components/Contact";
-
+import {QueryClient, QueryClientProvider} from 'react-query';
 import Dashboard from "./components/Dashboard/Dashboard";
 import Yamaha from './components/BikesBrands/Yamaha';
 import RE from './components/BikesBrands/RE';
@@ -13,7 +13,9 @@ import BMW from './components/BikesBrands/BMW';
 import Bajaj from './components/BikesBrands/Bajaj';
 import KTM from "./components/BikesBrands/KTM";
 function App() {
+  const queryClient = new QueryClient();
   return (
+    <QueryClientProvider client={queryClient}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Dashboard />} />
@@ -30,6 +32,7 @@ function App() {
         <Route path={`/allbikes/8`} element={<KTM />} />
       </Routes>
     </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 
