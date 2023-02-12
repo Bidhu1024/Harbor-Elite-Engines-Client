@@ -1,17 +1,72 @@
 import { Box } from "@mui/material";
 import React from "react";
+import ashu from "../Assets/Ashu.jpg";
+import gudu from "../Assets/bidhuimg.png";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import BikeNavbar from "./AllBikes/BikeNavbar";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 const About = () => {
   return (
-    <Box>
-      A former task force agent, Varun Batra is the unexpected owner of an
-      ancient and powerful artifact with the power to control and summon masses
-      of water out of nothing. Previously working for REALM to recover such
-      sorts of items from the black market and return them to their rightful
-      owners, Batra was regarded as a kind-hearted man but also a deadly force
-      to deal with in combat. His dedication to the cause through years of
-      service fighting criminals earned him a reputation as a hero and a legend.
-    </Box>
+    <>
+      <BikeNavbar />
+      <Box sx={{ display: "flex", justifyContent: "space-around" }}>
+        <Card sx={{ maxWidth: 345, mt: "1rem" }}>
+          <CardMedia
+            component="img"
+            alt="green iguana"
+            height="300"
+            image={ashu}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Lizard
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Lizards are a widespread group of squamate reptiles, with over
+              6,000 species, ranging across all continents except Antarctica
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button variant="outlined" size="small">
+              Github
+            </Button>
+            <Button variant="outlined" size="small">
+              LinkedIn
+            </Button>
+          </CardActions>
+        </Card>
+        <Card sx={{ maxWidth: 345, mt: "1rem" }}>
+          <CardMedia
+            component="img"
+            alt="green iguana"
+            height="300"
+            image={gudu}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Lizard
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Lizards are a widespread group of squamate reptiles, with over
+              6,000 species, ranging across all continents except Antarctica
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button variant="outlined" size="small">
+              Github
+            </Button>
+            <Button variant="outlined" size="small">
+              LinkedIn
+            </Button>
+          </CardActions>
+        </Card>
+      </Box>
+    </>
   );
 };
 
