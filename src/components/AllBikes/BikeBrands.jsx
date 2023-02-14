@@ -107,7 +107,7 @@ const BikeBrands = () => {
     >
       {data.map((bike) => {
         return (
-          <Box className="card">
+          <Box>
             <img src={bike.image} alt="Avatar" style={{height:'17rem', width:'17rem'}}/>
             <Box sx={{display:'flex', alignItems:'center', flexDirection:'column'}}>
             <Box>
