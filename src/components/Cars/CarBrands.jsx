@@ -18,7 +18,20 @@ const CarBrands = () => {
 if(data!==null){
   console.log(data);
 }
-// console.log(error);
+ console.log(error);
+ if (isLoading) {
+  return (
+    <Circles
+      height="150"
+      width="100%"
+      color="#4fa94d"
+      ariaLabel="circles-loading"
+      wrapperStyle={{}}
+      wrapperclassName=""
+      visible={true}
+    />
+  );
+}
   return (
     <Box sx={{ width: "100%", height: "100%", display: "flex", gap:'1rem',flexWrap:'wrap',justifyContent:'space-between',padding:'10px' }}>
       {data &&

@@ -13,6 +13,7 @@ import BMW from "./components/BikesBrands/BMW";
 import Bajaj from "./components/BikesBrands/Bajaj";
 import KTM from "./components/BikesBrands/KTM";
 import AllCars from "./components/Cars/AllCars";
+import AllEVS from "./components/EVS/AllEVS"
 function App() {
   const queryClient = new QueryClient();
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/allbikes" element={<AllBikes/>} />
           <Route path="/allcars" element={<AllCars />} />
+          <Route path="/allevs" element={<AllEVS />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path={`/allbikes/1`} element={<RE />} />

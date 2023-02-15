@@ -1,9 +1,15 @@
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import ev from "../../Assets/ola.jpg";
+import { useNavigate } from 'react-router-dom';
+
 const EVBox = () => {
+  const nav = useNavigate()
+  const handleEV = ()=>{
+    nav('/allevs')
+  }
   return (
-    <Stack>
+    <Stack onClick={handleEV}>
       <Box
         style={{
           backgroundImage: `url(${ev})`,
