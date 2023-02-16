@@ -101,14 +101,14 @@ const Dashboard = () => {
         <Recommendations />
       </Box>
       <Box>
-      <Typography
+      {/* <Typography
           sx={{ fontSize: "1.2rem", color: "blue", fontWeight: "bold", marginLeft:'3rem'}}
         >
           Creators
         </Typography>
         <Footer>
       
-        </Footer>
+        </Footer> */}
       </Box>
     </Stack>
   );
