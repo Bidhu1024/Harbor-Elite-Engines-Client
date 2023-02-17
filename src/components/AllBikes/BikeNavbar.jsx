@@ -12,6 +12,9 @@ const BikeNavbar = () => {
   const handleContact =()=>{
     nav('/contact')
   }
+  const handleAdmin =()=>{
+    nav('/admin')
+  }
   return (
     <Box
       sx={{
@@ -41,6 +44,9 @@ const BikeNavbar = () => {
         </Box>{" "}
         <Box onClick={handleAbout} sx={{cursor:'pointer'}}>
           <Typography>ABOUT</Typography>
+        </Box>
+        <Box onClick={handleAdmin} sx={{cursor:'pointer'}}>
+          <Typography>Admin</Typography>
         </Box>
       </Box>
     </Box>

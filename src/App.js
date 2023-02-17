@@ -14,6 +14,7 @@ import Bajaj from "./components/BikesBrands/Bajaj";
 import KTM from "./components/BikesBrands/KTM";
 import AllCars from "./components/Cars/AllCars";
 import AllEVS from "./components/EVS/AllEVS"
+import BikeAdmin from './Admin/BikeAdmin';
 function App() {
   const queryClient = new QueryClient();
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/allevs" element={<AllEVS />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={<BikeAdmin />} />
           <Route path={`/allbikes/1`} element={<RE />} />
           <Route path={`/allbikes/2`} element={<Yamaha />} />
           <Route path={`/allbikes/3`} element={<TVS />} />
