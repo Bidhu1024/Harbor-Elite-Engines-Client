@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import { Typography } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const BikeNavbar = () => {
   const nav = useNavigate();
@@ -46,7 +47,7 @@ const BikeNavbar = () => {
           <Typography>ABOUT</Typography>
         </Box>
         <Box onClick={handleAdmin} sx={{cursor:'pointer'}}>
-          <Typography>Admin</Typography>
+          <Typography><MenuIcon /></Typography>
         </Box>
       </Box>
     </Box>
