@@ -7,18 +7,18 @@ const BikeAdmin = () => {
   return (
     <Box sx={{ width: "100%", height: "100%" }}>
       <Typography sx={{backgroundColor:'orange', color:'white', display:'flex', justifyContent:'center', fontFamily:'bolder', fontSize:'1.3rem'}}>Welcome to Bike Admin Panel</Typography>
-      <Box sx={{ display:'flex', justifyContent:'center', backgroundColor:'#b9e8ed'}}>
+      <Box sx={{ display:'flex',justifyContent:'center',  backgroundColor:'#b9e8ed'}}>
         <form action="" method="post" autoComplete="off">
-        <Box sx={{display:'flex', flexDirection:'column', gap:'1rem'}}>
-          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem'}}>
+        <Box sx={{display:'flex', flexDirection:'column', gap:'1.2rem', alignItems:'flex-end'}}>
+          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem',}}>
             <Typography fontSize='1.2rem'>Enter the Name of the Bike</Typography>
             <TextField id="outlined-basic" variant="outlined" size="small" />
           </Box>
-          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem'}}>
+          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem', }}>
             <Typography fontSize='1.2rem'>Upload the images of the Bike</Typography>
             <TextField id="outlined-basic" variant="outlined" size="small" />
           </Box>
-          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem'}}>
+          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem', }}>
             <Typography fontSize='1.2rem'>Enter the Price of the Bike</Typography>
             <TextField id="outlined-basic" variant="outlined" size="small" />
           </Box>
@@ -26,19 +26,19 @@ const BikeAdmin = () => {
             <Typography fontSize='1.2rem'>Enter the Engine of the Bike</Typography>
             <TextField id="outlined-basic" variant="outlined" size="small" />
           </Box>
-          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem'}}>
+          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem',}}>
             <Typography fontSize='1.2rem'>Enter the Weight of the Bike</Typography>
             <TextField id="outlined-basic" variant="outlined" size="small" />
           </Box>
-          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem'}}>
+          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem',}}>
             <Typography fontSize='1.2rem'>Enter the Max Power of the Bike</Typography>
             <TextField id="outlined-basic" variant="outlined" size="small" />
           </Box>
-          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem'}}>
+          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem', }}>
             <Typography fontSize='1.2rem'>Enter the no of gears of the Bike</Typography>
             <TextField id="outlined-basic" variant="outlined" size="small" />
           </Box>
-          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem'}}>
+          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem', }}>
             <Typography fontSize='1.2rem'>Enter the ABS of the Bike</Typography>
             <TextField id="outlined-basic" variant="outlined" size="small" />
           </Box>
@@ -46,7 +46,7 @@ const BikeAdmin = () => {
             <Typography fontSize='1.2rem'>Enter the Top Speed of the Bike</Typography>
             <TextField id="outlined-basic" variant="outlined" size="small" />
           </Box>
-          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem'}}>
+          <Box sx={{display:'flex', alignItems:'center',gap:'1.2rem', }}>
             <Typography fontSize='1.2rem'>Enter the Fuel Capacity of the Bike</Typography>
             <TextField id="outlined-basic" variant="outlined" size="small" />
           </Box>
