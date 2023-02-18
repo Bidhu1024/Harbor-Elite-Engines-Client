@@ -1,10 +1,12 @@
 import { Box } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { Typography } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import DrawerC from "../Drawer/DrawerC";
 const BikeNavbar = () => {
+
+  
   const nav = useNavigate();
   const handleAbout =()=>{
    
@@ -46,8 +48,8 @@ const BikeNavbar = () => {
         <Box onClick={handleAbout} sx={{cursor:'pointer'}}>
           <Typography>ABOUT</Typography>
         </Box>
-        <Box onClick={handleAdmin} sx={{cursor:'pointer'}}>
-          <Typography><MenuIcon /></Typography>
+        <Box sx={{cursor:'pointer'}}>
+          <DrawerC />
         </Box>
       </Box>
     </Box>
