@@ -6,6 +6,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import { Button } from "@mui/material";
 const BikeAdmin = () => {
   const [age, setAge] = React.useState("");
 
@@ -42,7 +43,14 @@ const BikeAdmin = () => {
               alignItems: "flex-end",
             }}
           >
-           <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem",mt:'.6rem' }}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: "1.2rem",
+                mt: ".6rem",
+              }}
+            >
               <Typography fontSize="1.2rem">
                 Enter the Brand Name of the Bike
               </Typography>
@@ -96,10 +104,10 @@ const BikeAdmin = () => {
               </Typography>
               {/* <TextField id="outlined-basic" variant="outlined" size="small" /> */}
               <Box>
-              <Select onChange={handleChange} sx={{width:'222px'}}>
-                <MenuItem value={10}>Single Channel ABS</MenuItem>
-                <MenuItem value={20}>Double Channel ABS</MenuItem>
-              </Select>
+                <Select onChange={handleChange} sx={{ width: "222px" }}>
+                  <MenuItem value={10}>Single Channel ABS</MenuItem>
+                  <MenuItem value={20}>Double Channel ABS</MenuItem>
+                </Select>
               </Box>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
@@ -122,6 +130,24 @@ const BikeAdmin = () => {
             </Box>
           </Box>
         </form>
+      </Box>
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "20px",
+          alignItems: "center",
+          backgroundColor: "#b9e8ed",
+          pt: "5",
+        }}
+      >
+        <Button variant="outlined" sx={{ padding: "5px" }}>
+          Cancel
+        </Button>
+        <Button variant="contained" sx={{ padding: "5px" }}>
+          Save
+        </Button>
       </Box>
     </Box>
   );
