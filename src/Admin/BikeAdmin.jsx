@@ -42,6 +42,12 @@ const BikeAdmin = () => {
               alignItems: "flex-end",
             }}
           >
+           <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem",mt:'.6rem' }}>
+              <Typography fontSize="1.2rem">
+                Enter the Brand Name of the Bike
+              </Typography>
+              <TextField id="outlined-basic" variant="outlined" size="small" />
+            </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
                 Enter the Name of the Bike
@@ -91,8 +97,8 @@ const BikeAdmin = () => {
               {/* <TextField id="outlined-basic" variant="outlined" size="small" /> */}
               <Box>
               <Select onChange={handleChange} sx={{width:'222px'}}>
-                <MenuItem value={10}>Single Channel</MenuItem>
-                <MenuItem value={20}>Double Channel</MenuItem>
+                <MenuItem value={10}>Single Channel ABS</MenuItem>
+                <MenuItem value={20}>Double Channel ABS</MenuItem>
               </Select>
               </Box>
             </Box>
