@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import DrawerC from "../Drawer/DrawerC";
 const BikeNavbar = () => {
-
+  const [isOpen, setIsOpen] = useState(false);
   
   const nav = useNavigate();
   const handleAbout =()=>{
@@ -49,8 +49,11 @@ const BikeNavbar = () => {
           <Typography>ABOUT</Typography>
         </Box>
         <Box sx={{cursor:'pointer'}}>
-          <DrawerC />
+          <MenuIcon onClick={()=>setIsOpen(true)}/>
         </Box>
+        {
+          isOpen&&<DrawerC setIsOpen={setIsOpen} isOpen={isOpen}/>
+        }
       </Box>
     </Box>
   );
