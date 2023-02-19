@@ -6,6 +6,7 @@ import TwoWheelerIcon from "@mui/icons-material/TwoWheeler";
 import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
 import bike from '../../Assets/pngs/bike.png'
 import ElectricBikeIcon from '@mui/icons-material/ElectricBike';
+import { useNavigate } from "react-router-dom";
 
 const DrawerC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +28,10 @@ const DrawerC = () => {
       icon: <ElectricBikeIcon/>,
     },
   ];
+const nav = useNavigate()
+  const handleAdmin = ()=>{
+nav('/')
+  }
   return (
     <>
       <Menu onClick={() => setIsOpen(true)} />
@@ -41,7 +46,7 @@ const DrawerC = () => {
         <Typography fontFamily='roboto' fontWeight='500' color='white' fontSize='1rem'>Admin Panel</Typography>
           {Admins.map((vehicle, id) => {
             return  ( 
-             <Box key={vehicle.id} sx={{boxShadow:2,display:'flex', backgroundColor:'white',padding:'.4rem', justifyContent:'center', gap:'4px', borderRadius:'6px', cursor:'pointer' }}>
+             <Box key={vehicle.id} sx={{boxShadow:2,display:'flex', backgroundColor:'white',padding:'.4rem', justifyContent:'center', gap:'4px', borderRadius:'6px', cursor:'pointer' }} onClick={handleAdmins}>
              {vehicle.icon}
               <Typography>{vehicle.name}</Typography>
             </Box>
