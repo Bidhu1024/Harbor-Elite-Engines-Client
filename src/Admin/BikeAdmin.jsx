@@ -39,7 +39,7 @@ const BikeAdmin = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: "1.2rem",
+              gap: "1.21rem",
               alignItems: "flex-end",
             }}
           >
