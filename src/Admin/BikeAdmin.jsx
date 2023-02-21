@@ -62,12 +62,7 @@ const BikeAdmin = () => {
               </Typography>
               <TextField id="outlined-basic" variant="outlined" size="small" />
             </Box>
-            <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
-              <Typography fontSize="1.2rem">
-                Upload the images of the Bike
-              </Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small" />
-            </Box>
+
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
                 Enter the Price of the Bike
@@ -127,6 +122,18 @@ const BikeAdmin = () => {
                 Engine Transmission Types
               </Typography>
               <TextField id="outlined-basic" variant="outlined" size="small" />
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
+              <Typography fontSize="1.2rem">Bike Description</Typography>
+              <TextField id="outlined-basic" variant="outlined" size="small" />
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center", gap: "1.6rem" }}>
+              <Typography fontSize="1.2rem">
+                Upload the images of the Bike
+              </Typography>
+              <Box sx={{ marginLeft: "1rem" }}>
+                <input type="file" />
+              </Box>
             </Box>
           </Box>
         </form>
