@@ -2,10 +2,36 @@ import { Box, Button, Typography } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 const BikeAdmin = () => {
-  const [age, setAge] = React.useState("");
-//add validation
+  const [age, setAge] = useState("");
+  const [files, setFiles] = useState("");
+
+  const handleUpload = async (e) => {
+    e.preventDefault();
+    try {
+      const list = await Promise.all(
+        Object.values(files).map(async (file) => {
+          const data = new FormData();
+          data.append("file", file);
+          data.append("upload_preset", "upload");
+          const uploadRes = await axios.post(
+            "https://api.cloudinary.com/v1_1/dtl3zxaep/image/upload",
+            data
+          );
+
+          const { url } = uploadRes.data;
+          console.log(url);
+          return url;
+        })
+      );
+      console.log(list);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  //add validation
   const handleChange = (event) => {
     setAge(event.target.value);
   };
@@ -128,7 +154,13 @@ const BikeAdmin = () => {
                 Upload the images of the Bike
               </Typography>
               <Box sx={{ marginLeft: "1rem" }}>
-                <input type="file" />
+                <input
+                  type="file"
+                  id="file"
+                  multiple
+                  onChange={(e) => setFiles(e.target.files)}
+                  style={{ display: "block" }}
+                />
               </Box>
             </Box>
           </Box>
@@ -148,7 +180,11 @@ const BikeAdmin = () => {
         <Button variant="outlined" sx={{ padding: "5px" }}>
           Cancel
         </Button>
-        <Button variant="contained" sx={{ padding: "5px" }}>
+        <Button
+          variant="contained"
+          sx={{ padding: "5px" }}
+          onClick={handleUpload}
+        >
           Save
         </Button>
       </Box>
