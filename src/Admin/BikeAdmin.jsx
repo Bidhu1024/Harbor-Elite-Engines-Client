@@ -7,8 +7,8 @@ import React, { useState } from "react";
 const BikeAdmin = () => {
   const [age, setAge] = useState("");
   const [files, setFiles] = useState("");
-  const [name,setName] = useState("")
-
+  const [name, setName] = useState("");
+  const [error, setError] = useState(false);
   const handleUpload = async (e) => {
     e.preventDefault();
     try {
@@ -36,6 +36,10 @@ const BikeAdmin = () => {
   const handleChange = (event) => {
     setAge(event.target.value);
   };
+  const handleName  = (e)=>{
+    setName(e.target.value)
+    setError(!e.target.value)
+  }
   return (
     <Box sx={{ width: "100%", height: "100%" }}>
       <Typography
@@ -77,7 +81,16 @@ const BikeAdmin = () => {
               <Typography fontSize="1.2rem">
                 Enter the Brand Name of the Bike
               </Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small" />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                required
+                error = {error}
+                value = {name}
+                onChange = {handleName}
+                size="small"
+                helperText={error ? 'Name is required' : ''}
+              />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
