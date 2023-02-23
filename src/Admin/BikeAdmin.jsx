@@ -7,6 +7,7 @@ import React, { useState } from "react";
 const BikeAdmin = () => {
   const [age, setAge] = useState("");
   const [files, setFiles] = useState("");
+  const [name,setName] = useState("")
 
   const handleUpload = async (e) => {
     e.preventDefault();
