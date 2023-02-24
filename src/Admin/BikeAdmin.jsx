@@ -8,8 +8,10 @@ const BikeAdmin = () => {
   const [age, setAge] = useState("");
   const [files, setFiles] = useState("");
   const [brand, setBrand] = useState("");
-  const [error, setError] = useState(false);
+  const [error, setError] = useState('');
   const [name, setName] = useState("");
+  const [price,setPrice] = useState("")
+  const [engine,setEngine] = useState("")
   const handleUpload = async (e) => {
     e.preventDefault();
     try {
@@ -39,12 +41,22 @@ const BikeAdmin = () => {
   };
   const handleBrand = (e) => {
     setBrand(e.target.value);
-    setError(!e.target.value);
+    if(e.target.value === 0){
+      setError('Brand null')
+     }
   };
   const handleName = (e) => {
     setName(e.target.value)
-    setError(e.target.value.length<=4)
+    if(e.target.value <= 4){
+      setError('Short Name null')
+     }
   };
+  const handlePrice = (e)=>{
+    setPrice(e.target.value)
+  }
+  const handleEngine = (e)=>{
+    setEngine(e.target.value)
+  }
   return (
     <Box sx={{ width: "100%", height: "100%" }}>
       <Typography
@@ -94,7 +106,7 @@ const BikeAdmin = () => {
                 value={brand}
                 onChange={handleBrand}
                 size="small"
-                helperText={error ? "BrandName is required" : ""}
+                helperText={error === 'Brand null' ? "BrandName is required" : ""}
               />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
@@ -103,11 +115,11 @@ const BikeAdmin = () => {
               </Typography>
               <TextField id="outlined-basic" variant="outlined" size="small"
               required
-              error={error}
+              // error={error}
                 value={name}
                 onChange={handleName}
                 
-                helperText={error ? "Bike Name is required with atleast 4 letters" : ""}
+                helperText={error === 'Short Name null' ? "Bike Name is required" : ""}
                />
             </Box>
 
@@ -115,13 +127,21 @@ const BikeAdmin = () => {
               <Typography fontSize="1.2rem">
                 Enter the Price of the Bike
               </Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small" />
+              <TextField id="outlined-basic" variant="outlined" size="small"
+              required
+              onChange = {handlePrice}
+              value={price}
+               />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
                 Enter the Engine of the Bike
               </Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small" />
+              <TextField id="outlined-basic" variant="outlined" size="small"
+              required
+            onChange={handleEngine}
+            value = {engine}
+               />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
