@@ -107,7 +107,7 @@ const BikeAdmin = () => {
                 value={name}
                 onChange={handleName}
                 
-                helperText={error ? "Bike Name is required" : ""}
+                helperText={error ? "Bike Name is required with atleast 4 letters" : ""}
                />
             </Box>
 
