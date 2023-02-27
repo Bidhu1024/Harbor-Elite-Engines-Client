@@ -12,6 +12,9 @@ const BikeAdmin = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [engine, setEngine] = useState("");
+  const [weight,setWeight] = useState('')
+
+
   const handleUpload = async (e) => {
     e.preventDefault();
     try {
@@ -53,10 +56,16 @@ const BikeAdmin = () => {
   };
   const handlePrice = (e) => {
     setPrice(e.target.value);
+    if(e.target.value < 20000){
+      setError('price')
+    }
   };
   const handleEngine = (e) => {
     setEngine(e.target.value);
   };
+  const handleWeight = (e)=>{
+
+  }
   return (
     <Box sx={{ width: "100%", height: "100%" }}>
       <Typography
@@ -102,13 +111,13 @@ const BikeAdmin = () => {
                 id="outlined-basic"
                 variant="outlined"
                 required
-                error={error}
+                // error={error}
                 value={brand}
                 onChange={handleBrand}
                 size="small"
-                helperText={
-                  error === "Brand null" ? "BrandName is required" : ""
-                }
+                // helperText={
+                //   error === "Brand null" ? "BrandName is required" : ""
+                // }
               />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
@@ -120,12 +129,12 @@ const BikeAdmin = () => {
                 variant="outlined"
                 size="small"
                 required
-                error={error}
+                // error={error}
                 value={name}
                 onChange={handleName}
-                helperText={
-                  error === "Short Name null" ? "Bike Name is required" : ""
-                }
+                // helperText={
+                //   error === "Short Name null" ? "Bike Name is required" : ""
+                // }
               />
             </Box>
 
@@ -139,8 +148,10 @@ const BikeAdmin = () => {
                 size="small"
                 required
                 onChange={handlePrice}
+                error
                 value={price}
-              />
+                // helperText = {error==='price'?"Enter Price":''}
+                />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
@@ -159,7 +170,11 @@ const BikeAdmin = () => {
               <Typography fontSize="1.2rem">
                 Enter the Weight of the Bike
               </Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small" />
+              <TextField id="outlined-basic" variant="outlined" size="small"
+              required
+              onChange={handleWeight}
+              value={weight}
+               />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
