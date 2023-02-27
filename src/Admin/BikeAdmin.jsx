@@ -12,8 +12,13 @@ const BikeAdmin = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [engine, setEngine] = useState("");
-  const [weight,setWeight] = useState('')
-
+  const [weight, setWeight] = useState("");
+  const [power, setPower] = useState("");
+  const [gear, setGear] = useState("");
+  const [speed, setSpeed] = useState("");
+  const [fuel, setFuel] = useState("");
+  const [trans, setTrans] = useState("");
+  const [desc, setDesc] = useState('')
 
   const handleUpload = async (e) => {
     e.preventDefault();
@@ -50,21 +55,41 @@ const BikeAdmin = () => {
   };
   const handleName = (e) => {
     setName(e.target.value);
-    if (e.target.value <= 4) {
-      setError("Short Name null");
-    }
+    // if (e.target.value <= 4) {
+    //   setError("Short Name null");
+    // }
   };
   const handlePrice = (e) => {
     setPrice(e.target.value);
-    if(e.target.value < 20000){
-      setError('price')
-    }
+    // if(e.target.value < 20000){
+    //   setError('price')
+    // }
   };
   const handleEngine = (e) => {
     setEngine(e.target.value);
   };
-  const handleWeight = (e)=>{
+  const handleWeight = (e) => {
+    setWeight(e.target.value);
+  };
+  const handlePower = (e) => {
+    setPower(e.target.value);
+  };
 
+  const handlegear = (e) => {
+    setGear(e.target.value);
+  };
+
+  const handlespeed = (e) => {
+    setSpeed(e.target.value);
+  };
+  const handlefuel = (e) => {
+    setFuel(e.target.value);
+  };
+  const handletrans = (e) => {
+    setTrans(e.target.value);
+  };
+  const handleDesc = (e)=>{
+    setDesc(e.target.value)
   }
   return (
     <Box sx={{ width: "100%", height: "100%" }}>
@@ -151,7 +176,7 @@ const BikeAdmin = () => {
                 error
                 value={price}
                 // helperText = {error==='price'?"Enter Price":''}
-                />
+              />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
@@ -170,23 +195,40 @@ const BikeAdmin = () => {
               <Typography fontSize="1.2rem">
                 Enter the Weight of the Bike
               </Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small"
-              required
-              onChange={handleWeight}
-              value={weight}
-               />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                size="small"
+                required
+                onChange={handleWeight}
+                value={weight}
+              />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
                 Enter the Max Power of the Bike
               </Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small" />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                size="small"
+                required
+                onChange={handlePower}
+                value={power}
+              />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
                 Enter the no of gears of the Bike
               </Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small" />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                size="small"
+                required
+                onChange={handlegear}
+                value={gear}
+              />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
@@ -195,8 +237,8 @@ const BikeAdmin = () => {
               {/* <TextField id="outlined-basic" variant="outlined" size="small" /> */}
               <Box>
                 <Select onChange={handleChange} sx={{ width: "222px" }}>
-                  <MenuItem value={10}>Single Channel ABS</MenuItem>
-                  <MenuItem value={20}>Double Channel ABS</MenuItem>
+                  <MenuItem value={1}>Single Channel ABS</MenuItem>
+                  <MenuItem value={2}>Double Channel ABS</MenuItem>
                 </Select>
               </Box>
             </Box>
@@ -204,23 +246,46 @@ const BikeAdmin = () => {
               <Typography fontSize="1.2rem">
                 Enter the Top Speed of the Bike
               </Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small" />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                size="small"
+                required
+                onChange={handlespeed}
+                value={speed}
+              />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
                 Enter the Fuel Capacity of the Bike
               </Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small" />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                size="small"
+                required
+                onChange={handlefuel}
+                value={fuel}
+              />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
                 Engine Transmission Types
               </Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small" />
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                size="small"
+                required
+                onChange={handletrans}
+                value={trans}
+              />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">Bike Description</Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small" />
+              <TextField id="outlined-basic" variant="outlined" size="small"  required
+                onChange={handleDesc}
+                value={desc}/>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.6rem" }}>
               <Typography fontSize="1.2rem">
