@@ -91,6 +91,11 @@ const BikeAdmin = () => {
   const handleDesc = (e)=>{
     setDesc(e.target.value)
   }
+
+    const registerBike=(e)=>{
+      
+    }
+
   return (
     <Box sx={{ width: "100%", height: "100%" }}>
       <Typography
@@ -112,7 +117,7 @@ const BikeAdmin = () => {
           backgroundColor: "#b9e8ed",
         }}
       >
-        <form action="" method="post" autoComplete="off">
+        <form action="" method="post" autoComplete="off" onSubmit={registerBike}>
           <Box
             sx={{
               display: "flex",
