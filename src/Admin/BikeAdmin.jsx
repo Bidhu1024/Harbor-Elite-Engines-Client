@@ -1,6 +1,4 @@
 import { Box, Button, Typography } from "@mui/material";
-import MenuItem from "@mui/material/MenuItem";
-import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
 import axios from "axios";
 import React, { useState } from "react";
@@ -19,6 +17,8 @@ const BikeAdmin = () => {
   const [fuel, setFuel] = useState("");
   const [trans, setTrans] = useState("");
   const [desc, setDesc] = useState('')
+  const [abs, setAbs] = useState('')
+
 
   const handleUpload = async (e) => {
     e.preventDefault();
@@ -42,6 +42,7 @@ const BikeAdmin = () => {
     } catch (err) {
       console.log(err);
     }
+    console.log(brand,name,price,engine,weight,power,gear,speed,fuel,trans,desc)
   };
   //add validation
   const handleChange = (event) => {
@@ -93,7 +94,7 @@ const BikeAdmin = () => {
   }
 
     const registerBike=(e)=>{
-      
+      e.preventDefault()
     }
 
   return (
@@ -178,7 +179,7 @@ const BikeAdmin = () => {
                 size="small"
                 required
                 onChange={handlePrice}
-                error
+                
                 value={price}
                 // helperText = {error==='price'?"Enter Price":''}
               />
@@ -239,15 +240,12 @@ const BikeAdmin = () => {
               <Typography fontSize="1.2rem">
                 Enter the no of ABS channel of the Bike
               </Typography>
-              {/* <TextField id="outlined-basic" variant="outlined" size="small" /> */}
-              <Box>
-                <Select onChange={handleChange} sx={{ width: "222px" }}>
-                  <MenuItem value={1}>Single Channel ABS</MenuItem>
-                  <MenuItem value={2}>Double Channel ABS</MenuItem>
-                </Select>
-              </Box>
+              <TextField id="outlined-basic" variant="outlined" size="small" required
+                onChange={(e)=>setAbs(e.target.value)}
+                value={abs}/>
+            
             </Box>
-            <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
+            <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem"  }}>
               <Typography fontSize="1.2rem">
                 Enter the Top Speed of the Bike
               </Typography>
