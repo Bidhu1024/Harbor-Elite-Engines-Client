@@ -15,7 +15,7 @@ const BikeAdmin = () => {
   const [gear, setGear] = useState("");
   const [speed, setSpeed] = useState("");
   const [fuel, setFuel] = useState("");
-  const [trans, setTrans] = useState("");
+  // const [trans, setTrans] = useState("");
   const [desc, setDesc] = useState('')
   const [abs, setAbs] = useState('')
 
@@ -42,7 +42,7 @@ const BikeAdmin = () => {
     } catch (err) {
       console.log(err);
     }
-    console.log(brand,name,price,engine,weight,power,gear,speed,fuel,trans,desc)
+    console.log(brand,name,price,engine,weight,power,gear,speed,fuel,desc)
   };
   //add validation
   const handleChange = (event) => {
@@ -86,9 +86,9 @@ const BikeAdmin = () => {
   const handlefuel = (e) => {
     setFuel(e.target.value);
   };
-  const handletrans = (e) => {
-    setTrans(e.target.value);
-  };
+  // const handletrans = (e) => {
+  //   setTrans(e.target.value);
+  // };
   const handleDesc = (e)=>{
     setDesc(e.target.value)
   }
@@ -271,7 +271,7 @@ const BikeAdmin = () => {
                 value={fuel}
               />
             </Box>
-            <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
+            {/* <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
                 Engine Transmission Types
               </Typography>
@@ -283,7 +283,7 @@ const BikeAdmin = () => {
                 onChange={handletrans}
                 value={trans}
               />
-            </Box>
+            </Box> */}
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">Bike Description</Typography>
               <TextField id="outlined-basic" variant="outlined" size="small"  required
