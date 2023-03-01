@@ -21,6 +21,7 @@ const BikeAdmin = () => {
 
 
   const handleUpload = async (e) => {
+    
     e.preventDefault();
     try {
       const list = await Promise.all(
@@ -42,7 +43,9 @@ const BikeAdmin = () => {
     } catch (err) {
       console.log(err);
     }
-    console.log(brand,name,price,engine,weight,power,gear,speed,fuel,desc)
+
+
+    // console.log(brand,name,price,engine,weight,power,gear,speed,fuel,desc)
   };
   //add validation
   const handleChange = (event) => {
