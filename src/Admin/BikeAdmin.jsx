@@ -17,13 +17,11 @@ const BikeAdmin = () => {
   const [gear, setGear] = useState("");
   const [speed, setSpeed] = useState("");
   const [fuel, setFuel] = useState("");
-  // const [trans, setTrans] = useState("");
-  const [desc, setDesc] = useState('')
-  const [abs, setAbs] = useState('')
+  const [desc, setDesc] = useState("");
+  const [abs, setAbs] = useState("");
 
 
-  const handleUpload = async (e) => {
-
+  const handleForm = async (e) => {
     e.preventDefault();
     try {
       const list = await Promise.all(
@@ -41,36 +39,33 @@ const BikeAdmin = () => {
           return url;
         })
       );
+      await axios
+        .post("/allbikes/types", {
+          brand,
+          name,
+          price,
+          engine,
+          weight,
+          gear,
+          abs,
+          max_power: power,
+          top_speed: speed,
+          fuel,
+          desc,
+          images: list,
+        })
+        .then((res) => console.log(res))
+        .catch((error) => console.log(error));
       console.log(list);
     } catch (err) {
       console.log(err);
     }
-    
-
-    
   };
-
-  const handleForm = async (e)=>{
-    e.preventDefault()
-   await axios.post("/allbikes/types",{
-      brand,
-      name,
-      price,
-      engine,
-      weight,
-      gear,
-      abs,
-      top_speed:speed,
-      fuel,
-      desc,
-      images:files,
-    }).then(res=>console.log(res)).catch(error=>console.log(error))
-  }
 
   const { data, isLoading } = useMutation("bikes", handleForm);
 
-  if(data){
-    console.log(data)
+  if (data) {
+    console.log(data);
   }
   //add validation
   const handleChange = (event) => {
@@ -117,13 +112,13 @@ const BikeAdmin = () => {
   // const handletrans = (e) => {
   //   setTrans(e.target.value);
   // };
-  const handleDesc = (e)=>{
-    setDesc(e.target.value)
-  }
+  const handleDesc = (e) => {
+    setDesc(e.target.value);
+  };
 
-    const registerBike=(e)=>{
-      e.preventDefault()
-    }
+  const registerBike = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <Box sx={{ width: "100%", height: "100%" }}>
@@ -146,7 +141,12 @@ const BikeAdmin = () => {
           backgroundColor: "#b9e8ed",
         }}
       >
-        <form action="" method="post" autoComplete="off" onSubmit={registerBike}>
+        <form
+          action=""
+          method="post"
+          autoComplete="off"
+          onSubmit={registerBike}
+        >
           <Box
             sx={{
               display: "flex",
@@ -207,7 +207,6 @@ const BikeAdmin = () => {
                 size="small"
                 required
                 onChange={handlePrice}
-                
                 value={price}
                 // helperText = {error==='price'?"Enter Price":''}
               />
@@ -268,12 +267,16 @@ const BikeAdmin = () => {
               <Typography fontSize="1.2rem">
                 Enter the no of ABS channel of the Bike
               </Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small" required
-                onChange={(e)=>setAbs(e.target.value)}
-                value={abs}/>
-            
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                size="small"
+                required
+                onChange={(e) => setAbs(e.target.value)}
+                value={abs}
+              />
             </Box>
-            <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem"  }}>
+            <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">
                 Enter the Top Speed of the Bike
               </Typography>
@@ -314,9 +317,14 @@ const BikeAdmin = () => {
             </Box> */}
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
               <Typography fontSize="1.2rem">Bike Description</Typography>
-              <TextField id="outlined-basic" variant="outlined" size="small"  required
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                size="small"
+                required
                 onChange={handleDesc}
-                value={desc}/>
+                value={desc}
+              />
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: "1.6rem" }}>
               <Typography fontSize="1.2rem">
@@ -352,9 +360,9 @@ const BikeAdmin = () => {
         <Button
           variant="contained"
           sx={{ padding: "5px" }}
-          onClick={handleUpload}
-          onSubmit = {handleForm}
-                  >
+          // onClick={handleUpload}
+          onClick={handleForm}
+        >
           Save
         </Button>
       </Box>
