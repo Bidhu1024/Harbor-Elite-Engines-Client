@@ -2,9 +2,11 @@ import { Box, Button, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import axios from "axios";
 import React, { useState } from "react";
+import { useMutation } from "react-query";
+
 const BikeAdmin = () => {
   const [age, setAge] = useState("");
-  const [files, setFiles] = useState("");
+  const [files, setFiles] = useState([]);
   const [brand, setBrand] = useState("");
   const [error, setError] = useState("");
   const [name, setName] = useState("");
@@ -43,10 +45,33 @@ const BikeAdmin = () => {
     } catch (err) {
       console.log(err);
     }
-
+    
 
     
   };
+
+  const handleForm = async (e)=>{
+    e.preventDefault()
+   await axios.post("/allbikes/types",{
+      brand,
+      name,
+      price,
+      engine,
+      weight,
+      gear,
+      abs,
+      top_speed:speed,
+      fuel,
+      desc,
+      images:files,
+    }).then(res=>console.log(res)).catch(error=>console.log(error))
+  }
+
+  const { data, isLoading } = useMutation("bikes", handleForm);
+
+  if(data){
+    console.log(data)
+  }
   //add validation
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -328,7 +353,8 @@ const BikeAdmin = () => {
           variant="contained"
           sx={{ padding: "5px" }}
           onClick={handleUpload}
-        >
+          onSubmit = {handleForm}
+                  >
           Save
         </Button>
       </Box>
