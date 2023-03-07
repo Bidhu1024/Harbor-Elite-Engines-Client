@@ -52,8 +52,7 @@ const About = () => {
              Bidhubhushan Gahan
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+                Software Engineer at Softsensor.ai
             </Typography>
           </CardContent>
           <CardActions>
