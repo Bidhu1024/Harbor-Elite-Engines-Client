@@ -34,7 +34,7 @@ const About = () => {
             <Button variant="outlined" size="small">
               Github
             </Button>
-            <Button variant="outlined" size="small">
+            <Button variant="contained" size="small">
               LinkedIn
             </Button>
           </CardActions>
