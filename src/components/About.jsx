@@ -27,16 +27,20 @@ const About = () => {
               Ashutosh Acharya
             </Typography>
             <Typography variant="body2" color="text.secondary">
-           Software Engineer at Softsensor.ai
+              Software Engineer at Softsensor.ai
             </Typography>
           </CardContent>
           <CardActions>
+            <a href="https://github.com/AsutoshAcharya" target="_blank">
             <Button variant="outlined" size="small">
               Github
             </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/asutosh-acharya-40b591228/" target="_blank">
             <Button variant="contained" size="small">
               LinkedIn
             </Button>
+            </a>
           </CardActions>
         </Card>
         <Card sx={{ maxWidth: 345, mt: "1rem" }}>
@@ -48,19 +52,24 @@ const About = () => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-             Bidhubhushan Gahan
+              Bidhubhushan Gahan
             </Typography>
             <Typography variant="body2" color="text.secondary">
-                Software Engineer at Softsensor.ai
+              Software Engineer at Softsensor.ai
             </Typography>
           </CardContent>
           <CardActions>
+          <a href="https://github.com/Bidhu1024" target="_blank">
             <Button variant="outlined" size="small">
               Github
             </Button>
-            <Button variant="outlined" size="small">
-              LinkedIn
-            </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/bidhubhushan-gahan-7357a9174/" target="_blank">
+              {" "}
+              <Button variant="outlined" size="small">
+                LinkedIn
+              </Button>
+            </a>
           </CardActions>
         </Card>
       </Box>
