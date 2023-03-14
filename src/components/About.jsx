@@ -55,7 +55,7 @@ const About = () => {
               Bidhubhushan Gahan
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Software Engineer at Softsensor.ai
+              Software Engineer at Softsensor.Ai
             </Typography>
           </CardContent>
           <CardActions>
