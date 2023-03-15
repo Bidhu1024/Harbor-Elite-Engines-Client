@@ -18,13 +18,15 @@ import BikeAdmin from './Admin/BikeAdmin';
 
 import CarAdmin from './Admin/CarAdmin';
 import EvAdmin from './Admin/EvAdmin';
+import SignIn from "./components/SignIn";
 function App() {
   const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<SignIn />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/allbikes" element={<AllBikes/>} />
           <Route path="/allcars" element={<AllCars />} />
           <Route path="/allevs" element={<AllEVS />} />
