@@ -25,12 +25,12 @@ const SignIn = () => {
         }}
       >
         <Box sx={{ width: "50%", height: "100%", backgroundColor: "white" }}>
-          <Typography fontSize="2rem" textAlign="center">
-            Login
+          <Typography fontSize="2rem" textAlign="center" color="#0000FF">
+            LOGIN
           </Typography>
         </Box>
         <Box sx={{ width: "50%", height: "100%" }}>
-          <img src={loginlogo} width="320" height="480" objectFit="cover" />{" "}
+          <img src={loginlogo} width="320" height="480" objectFit="cover" />
         </Box>
       </Box>
     </Box>
