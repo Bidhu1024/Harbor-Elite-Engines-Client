@@ -1,8 +1,10 @@
 import { Box, Typography, TextField, Button } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import loginlogo from "../Assets/super-bike-like-kawasaki.jpg";
 
 const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <Box
       sx={{
@@ -12,7 +14,6 @@ const SignIn = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-   
       }}
     >
       <Box
@@ -22,10 +23,16 @@ const SignIn = () => {
           width: "60rem",
           height: "30rem",
           boxShadow: 3,
-         
         }}
       >
-        <Box sx={{ width: "50%", height: "100%", backgroundColor: "white", padding:'5px' }}>
+        <Box
+          sx={{
+            width: "50%",
+            height: "100%",
+            backgroundColor: "white",
+            padding: "5px",
+          }}
+        >
           <Typography
             fontSize="1.8rem"
             textAlign="center"
@@ -34,21 +41,53 @@ const SignIn = () => {
           >
             LOGIN
           </Typography>
-          
-            <form action="">
-            <Box sx={{display:'flex', flexDirection:'column'}}>
-              <Typography fontSize="1.2rem" color='gray'>Email</Typography>
-              <TextField></TextField>
-              <Typography fontSize="1.2rem" color='gray'>Password</Typography>
-              <TextField></TextField>
-              <Button>SignIn</Button>
+
+          <form action="">
+            <Box sx={{ display: "flex", flexDirection: "column" }}>
+              <Typography fontSize="1.2rem" color="gray">
+                Email
+              </Typography>
+              <TextField
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                size="small"
+              />
+              <Typography fontSize="1.2rem" color="gray">
+                Password
+              </Typography>
+              <TextField
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                size="small"
+              />
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: "#ad23db",
+                  marginTop: "2rem",
+                  width: "12rem",
+                  marginLeft: "10rem",
+                  "&:hover": {
+                    backgroundColor: "#4f0269",
+                    boxShadow: "none",
+                    color: "white",
+                  },
+                }}
+              >
+                SignIn
+              </Button>
               <Typography>Didn't SignedUp yet? SignUp</Typography>
-              </Box>
-            </form>
-          
+            </Box>
+          </form>
         </Box>
         <Box sx={{ width: "50%", height: "100%" }}>
-          <img src={loginlogo} width="480" height="480" objectFit="cover" alt="jj"/>
+          <img
+            src={loginlogo}
+            width="480"
+            height="480"
+            objectFit="cover"
+            alt="jj"
+          />
         </Box>
       </Box>
     </Box>
