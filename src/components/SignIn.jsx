@@ -39,6 +39,7 @@ const SignIn = () => {
             textAlign="center"
             color="#0000FF"
             fontWeight="bold"
+            fontFamily="Poppins"
           >
             LOGIN
           </Typography>
@@ -52,16 +53,16 @@ const SignIn = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 size="small"
-                sx={{width:'24rem'}}
+                sx={{width:'24rem', marginTop:'.6rem'}}
               />
-              <Typography fontSize="1.2rem" color="gray">
+              <Typography fontSize="1.2rem" color="gray" sx={{ marginTop:'.6rem'}}>
                 Password
               </Typography>
               <TextField
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 size="small"
-                sx={{width:'24rem'}}
+                sx={{width:'24rem', marginTop:'.6rem'}}
               />
               <Button
                 variant="contained"
@@ -79,7 +80,7 @@ const SignIn = () => {
               >
                 SignIn
               </Button>
-              <Typography>Didn't Registered yet? SignUp</Typography>
+              <Typography sx={{marginTop:'1rem', alignContent:'center',marginLeft: "8.5rem",}}>Didn't Registered yet?<span style={{color:'blue', fontWeight:'bold'}}> SignUp</span></Typography>
             </Box>
           </form>
         </Box>
