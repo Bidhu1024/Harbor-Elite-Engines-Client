@@ -45,7 +45,7 @@ const SignIn = () => {
           </Box>
         </Box>
         <Box sx={{ width: "50%", height: "100%" }}>
-          <img src={loginlogo} width="320" height="480" objectFit="cover" />
+          <img src={loginlogo} width="320" height="480" objectFit="cover" alt="jj"/>
         </Box>
       </Box>
     </Box>
