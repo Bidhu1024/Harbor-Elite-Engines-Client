@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, TextField, Button } from "@mui/material";
 import React from "react";
 import loginlogo from "../Assets/logologin.jpeg";
 
@@ -25,9 +25,24 @@ const SignIn = () => {
         }}
       >
         <Box sx={{ width: "50%", height: "100%", backgroundColor: "white" }}>
-          <Typography fontSize="2rem" textAlign="center" color="#0000FF">
+          <Typography
+            fontSize="1.8rem"
+            textAlign="center"
+            color="#0000FF"
+            fontWeight="bold"
+          >
             LOGIN
           </Typography>
+          <Box>
+            <form action="">
+              <Typography>UserName</Typography>
+              <TextField></TextField>
+              <Typography>UserName</Typography>
+              <TextField></TextField>
+              <Button>SignIn</Button>
+              <Typography>Didn't SignedUp yet? SignUp</Typography>
+            </form>
+          </Box>
         </Box>
         <Box sx={{ width: "50%", height: "100%" }}>
           <img src={loginlogo} width="320" height="480" objectFit="cover" />
