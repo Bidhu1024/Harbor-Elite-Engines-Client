@@ -70,6 +70,7 @@ const SignIn = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 size="small"
+                type="password"
                 sx={{width:'24rem', marginTop:'.6rem'}}
               />
               <Button
