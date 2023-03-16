@@ -23,6 +23,7 @@ const SignIn = () => {
           width: "60rem",
           height: "30rem",
           boxShadow: 3,
+          borderRadius:'10px'
         }}
       >
         <Box
@@ -51,6 +52,7 @@ const SignIn = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 size="small"
+                sx={{width:'24rem'}}
               />
               <Typography fontSize="1.2rem" color="gray">
                 Password
@@ -59,6 +61,7 @@ const SignIn = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 size="small"
+                sx={{width:'24rem'}}
               />
               <Button
                 variant="contained"
@@ -76,7 +79,7 @@ const SignIn = () => {
               >
                 SignIn
               </Button>
-              <Typography>Didn't SignedUp yet? SignUp</Typography>
+              <Typography>Didn't Registered yet? SignUp</Typography>
             </Box>
           </form>
         </Box>
@@ -84,7 +87,7 @@ const SignIn = () => {
           <img
             src={loginlogo}
             width="480"
-            height="480"
+            height="490"
             objectFit="cover"
             alt="jj"
           />
