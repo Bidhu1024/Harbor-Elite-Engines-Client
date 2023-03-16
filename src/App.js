@@ -19,6 +19,7 @@ import BikeAdmin from './Admin/BikeAdmin';
 import CarAdmin from './Admin/CarAdmin';
 import EvAdmin from './Admin/EvAdmin';
 import SignIn from "./components/SignIn";
+import Register from "./components/Register";
 function App() {
   const queryClient = new QueryClient();
   return (
@@ -26,6 +27,7 @@ function App() {
       <BrowserRouter>
         <Routes>
         <Route path="/" element={<SignIn />} />
+        <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/allbikes" element={<AllBikes/>} />
           <Route path="/allcars" element={<AllCars />} />

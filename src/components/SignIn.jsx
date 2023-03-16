@@ -1,10 +1,18 @@
 import { Box, Typography, TextField, Button } from "@mui/material";
 import React, { useState } from "react";
 import loginlogo from "../Assets/super-bike-like-kawasaki.jpg";
+import { useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
+  const nav = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const handleRegister = ()=>{
+    nav("/register")
+  }
+  const handleSignIn = (e)=>{
+    e.preventDefault();
+  }
   return (
     <Box
       sx={{
@@ -66,11 +74,12 @@ const SignIn = () => {
               />
               <Button
                 variant="contained"
+                onClick={handleSignIn}
                 sx={{
                   backgroundColor: "#ad23db",
                   marginTop: "2rem",
                   width: "12rem",
-                  marginLeft: "10rem",
+                  marginLeft: "9rem",
                   "&:hover": {
                     backgroundColor: "#4f0269",
                     boxShadow: "none",
@@ -80,7 +89,7 @@ const SignIn = () => {
               >
                 SignIn
               </Button>
-              <Typography sx={{marginTop:'1rem', alignContent:'center',marginLeft: "8.5rem",}}>Didn't Registered yet?<span style={{color:'blue', fontWeight:'bold'}}> SignUp</span></Typography>
+              <Typography sx={{marginTop:'1rem', alignContent:'center',marginLeft: "8rem",}}>Didn't Registered yet?<span onClick={handleRegister} style={{color:'blue', fontWeight:'bold', cursor:'pointer'}}> SignUp</span></Typography>
             </Box>
           </form>
         </Box>
