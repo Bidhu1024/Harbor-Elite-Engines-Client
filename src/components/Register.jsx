@@ -1,6 +1,6 @@
 import { Box, Typography, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -8,13 +8,13 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const nav = useNavigate();
 
-  const handlesign = ()=>{
-    nav("/")
-  }
+  const handlesign = () => {
+    nav("/");
+  };
 
-  const handleRegister =(e)=>{
-e.preventDefault()
-  }
+  const handleRegister = (e) => {
+    e.preventDefault();
+  };
   return (
     <Box
       sx={{
@@ -49,13 +49,12 @@ e.preventDefault()
           <Typography
             sx={{ padding: "10px", color: "white", fontSize: "1.2rem" }}
           >
-            This website contains information about different Bikes, Cars and Evs
-            of multiple brands in India. You will have a brief idea about the
-            vehicles out there. Here you can register yourself and login to see
-            the contents.
+            This website contains information about different Bikes, Cars and
+            Evs of multiple brands in India. You will have a brief idea about
+            the vehicles out there. Here you can register yourself and login to
+            see the contents.
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
-            {" "}
             <span
               style={{
                 display: "flex",
@@ -132,16 +131,14 @@ e.preventDefault()
                 onChange={(e) => setPassword(e.target.value)}
                 sx={{ width: "25rem" }}
               />
-            
-             <Button
+
+              <Button
                 variant="contained"
                 sx={{ marginTop: "2rem", width: "10rem", marginLeft: "8rem" }}
-
                 onClick={handleRegister}
               >
                 Register
               </Button>
-    
             </Box>
           </form>
         </Box>
