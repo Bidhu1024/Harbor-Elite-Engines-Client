@@ -1,4 +1,4 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, TextField } from "@mui/material";
 import React from "react";
 
 const Register = () => {
@@ -70,7 +70,46 @@ const Register = () => {
         </Box>
         <Box sx={{ width: "50%", height: "100%", backgroundColor: "white" }}>
           <form action="POST">
-            <Box></Box>
+            <Box
+              sx={{ padding: "10px", display: "flex", flexDirection: "column" }}
+            >
+              <Typography
+                sx={{
+                  color: "#0528f2",
+                  fontSize: "2rem",
+                  fontWeight: "bold",
+                  textAlign: "center",
+                  padding: "10px",
+                }}
+              >
+                REGISTRATION
+              </Typography>
+              <Typography
+                sx={{ marginTop: ".6rem", color: "black", fontSize: "1rem" }}
+              >
+                Your Name
+              </Typography>
+              <TextField size="small" sx={{ width: "25rem" }} />
+              <Typography
+                sx={{ marginTop: ".6rem", color: "black", fontSize: "1rem" }}
+              >
+                Email
+              </Typography>
+              <TextField size="small" sx={{ width: "25rem" }} />
+              <Typography
+                sx={{ marginTop: ".6rem", color: "black", fontSize: "1rem" }}
+              >
+                Password
+              </Typography>
+              <TextField size="small" sx={{ width: "25rem" }} />
+              <Button
+                variant="contained"
+                type="password"
+                sx={{ marginTop: "2rem", width: "10rem", marginLeft: "1.5rem" }}
+              >
+                Register
+              </Button>
+            </Box>
           </form>
         </Box>
       </Box>
