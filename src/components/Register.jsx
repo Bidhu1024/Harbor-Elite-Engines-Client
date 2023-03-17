@@ -1,4 +1,4 @@
-import { Box, Typography,Button } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import React from "react";
 
 const Register = () => {
@@ -33,19 +33,44 @@ const Register = () => {
           >
             INFORMATION
           </Typography>
-          <Typography sx={{padding:'10px', color:'white', fontSize:'1.2rem'}}>
+          <Typography
+            sx={{ padding: "10px", color: "white", fontSize: "1.2rem" }}
+          >
             This website contains information about different bikes,cars and Evs
             of multiple brands in India. You will have a brief idea about the
             vehicles out there. Here you can register yourself and login to see
             the contents.
           </Typography>
-          <Box sx={{display:'flex', justifyContent:'center'}}> <span style={{display:'flex', alignItems:'center', fontSize:'1.2rem', color:'white'}}>Already Registered?</span> <Button variant="outlined" sx={{marginLeft:'10px', backgroundColor:'white', textAlign:'center', padding:'4px 8px'}}>Sign In</Button></Box>
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            {" "}
+            <span
+              style={{
+                display: "flex",
+                alignItems: "center",
+                fontSize: "1.2rem",
+                color: "white",
+              }}
+            >
+              Already Registered?
+            </span>{" "}
+            <Button
+              variant="outlined"
+              sx={{
+                marginLeft: "10px",
+                backgroundColor: "white",
+                textAlign: "center",
+                padding: "6px 25px",
+                color: "black",
+                boxShadow: 2,
+              }}
+            >
+              Sign In
+            </Button>
+          </Box>
         </Box>
-        <Box sx={{ width: "50%", height: "100%", backgroundColor:'white' }}>
+        <Box sx={{ width: "50%", height: "100%", backgroundColor: "white" }}>
           <form action="POST">
-            <Box>
-
-            </Box>
+            <Box></Box>
           </form>
         </Box>
       </Box>
