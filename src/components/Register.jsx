@@ -1,7 +1,20 @@
 import { Box, Typography, Button, TextField } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const nav = useNavigate();
+
+  const handlesign = ()=>{
+    nav("/")
+  }
+
+  const handleRegister =(e)=>{
+e.preventDefault()
+  }
   return (
     <Box
       sx={{
@@ -63,6 +76,7 @@ const Register = () => {
                 color: "black",
                 boxShadow: 2,
               }}
+              onClick={handlesign}
             >
               Sign In
             </Button>
@@ -89,26 +103,45 @@ const Register = () => {
               >
                 Your Name
               </Typography>
-              <TextField size="small" sx={{ width: "25rem" }} />
+              <TextField
+                size="small"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                sx={{ width: "25rem" }}
+              />
               <Typography
                 sx={{ marginTop: ".6rem", color: "black", fontSize: "1rem" }}
               >
                 Email
               </Typography>
-              <TextField size="small" sx={{ width: "25rem" }} />
+              <TextField
+                size="small"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                sx={{ width: "25rem" }}
+              />
               <Typography
                 sx={{ marginTop: ".6rem", color: "black", fontSize: "1rem" }}
               >
                 Password
               </Typography>
-              <TextField size="small" sx={{ width: "25rem" }} />
-              <Button
-                variant="contained"
+              <TextField
+                size="small"
                 type="password"
-                sx={{ marginTop: "2rem", width: "10rem", marginLeft: "1.5rem" }}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                sx={{ width: "25rem" }}
+              />
+            
+             <Button
+                variant="contained"
+                sx={{ marginTop: "2rem", width: "10rem", marginLeft: "8rem" }}
+
+                onClick={handleRegister}
               >
                 Register
               </Button>
+    
             </Box>
           </form>
         </Box>
