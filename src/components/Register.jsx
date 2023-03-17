@@ -49,7 +49,7 @@ e.preventDefault()
           <Typography
             sx={{ padding: "10px", color: "white", fontSize: "1.2rem" }}
           >
-            This website contains information about different bikes,cars and Evs
+            This website contains information about different Bikes, Cars and Evs
             of multiple brands in India. You will have a brief idea about the
             vehicles out there. Here you can register yourself and login to see
             the contents.
