@@ -1,18 +1,18 @@
 import { Box, Typography, TextField, Button } from "@mui/material";
 import React, { useState } from "react";
 import loginlogo from "../Assets/super-bike-like-kawasaki.jpg";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
-  const nav = useNavigate()
+  const nav = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleRegister = ()=>{
-    nav("/register")
-  }
-  const handleSignIn = (e)=>{
+  const handleRegister = () => {
+    nav("/register");
+  };
+  const handleSignIn = (e) => {
     e.preventDefault();
-  }
+  };
   return (
     <Box
       sx={{
@@ -31,7 +31,7 @@ const SignIn = () => {
           width: "60rem",
           height: "30rem",
           boxShadow: 3,
-          borderRadius:'10px'
+          borderRadius: "10px",
         }}
       >
         <Box
@@ -61,9 +61,13 @@ const SignIn = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 size="small"
-                sx={{width:'24rem', marginTop:'.6rem'}}
+                sx={{ width: "24rem", marginTop: ".6rem" }}
               />
-              <Typography fontSize="1.2rem" color="gray" sx={{ marginTop:'.6rem'}}>
+              <Typography
+                fontSize="1.2rem"
+                color="gray"
+                sx={{ marginTop: ".6rem" }}
+              >
                 Password
               </Typography>
               <TextField
@@ -71,28 +75,53 @@ const SignIn = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 size="small"
                 type="password"
-                sx={{width:'24rem', marginTop:'.6rem'}}
+                sx={{ width: "24rem", marginTop: ".6rem" }}
               />
-            <Box sx={{display:'flex', justifyContent:'center',marginTop: "2rem",}}>
-            <Button
-                variant="contained"
-                onClick={handleSignIn}
+              <Box
                 sx={{
-                  backgroundColor: "#ad23db",
-                  
-                  width: "12rem",
-                 
-                  "&:hover": {
-                    backgroundColor: "#4f0269",
-                    boxShadow: "none",
-                    color: "white",
-                  },
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "2rem",
                 }}
               >
-                SignIn
-              </Button>
-            </Box>
-              <Typography sx={{marginTop:'1rem', alignContent:'center',marginLeft: "8rem",}}>Didn't Registered yet?<span onClick={handleRegister} style={{color:'blue', fontWeight:'bold', cursor:'pointer'}}> SignUp</span></Typography>
+                <Button
+                  variant="contained"
+                  onClick={handleSignIn}
+                  sx={{
+                    backgroundColor: "#ad23db",
+
+                    width: "12rem",
+
+                    "&:hover": {
+                      backgroundColor: "#4f0269",
+                      boxShadow: "none",
+                      color: "white",
+                    },
+                  }}
+                >
+                  SignIn
+                </Button>
+              </Box>
+              <Typography
+                sx={{
+                  marginTop: "1rem",
+                  alignContent: "center",
+                  marginLeft: "8rem",
+                }}
+              >
+                Didn't Registered yet?
+                <span
+                  onClick={handleRegister}
+                  style={{
+                    color: "blue",
+                    fontWeight: "bold",
+                    cursor: "pointer",
+                  }}
+                >
+                  {" "}
+                  SignUp
+                </span>
+              </Typography>
             </Box>
           </form>
         </Box>
