@@ -73,14 +73,15 @@ const SignIn = () => {
                 type="password"
                 sx={{width:'24rem', marginTop:'.6rem'}}
               />
-              <Button
+            <Box sx={{display:'flex', justifyContent:'center',marginTop: "2rem",}}>
+            <Button
                 variant="contained"
                 onClick={handleSignIn}
                 sx={{
                   backgroundColor: "#ad23db",
-                  marginTop: "2rem",
+                  
                   width: "12rem",
-                  marginLeft: "9rem",
+                 
                   "&:hover": {
                     backgroundColor: "#4f0269",
                     boxShadow: "none",
@@ -90,6 +91,7 @@ const SignIn = () => {
               >
                 SignIn
               </Button>
+            </Box>
               <Typography sx={{marginTop:'1rem', alignContent:'center',marginLeft: "8rem",}}>Didn't Registered yet?<span onClick={handleRegister} style={{color:'blue', fontWeight:'bold', cursor:'pointer'}}> SignUp</span></Typography>
             </Box>
           </form>
