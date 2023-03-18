@@ -7,11 +7,15 @@ import BikeBox from "./BikeBox";
 import CarBox from "./CarBox";
 import EVBox from "./EVBox";
 import Recommendations from "./Recommendations";
-import Footer from "./Footer";
+
 const Dashboard = () => {
   return (
-    <Stack sx={{ width: "100%" }}>
-      <Box
+    <>
+    <Stack sx={{ width: "100vw", height:'100vh', backgroundColor:'#28282B' }}>
+    
+    
+    </Stack>
+      {/* <Box
         sx={{
           width: "99%",
 
@@ -101,16 +105,11 @@ const Dashboard = () => {
         <Recommendations />
       </Box>
       <Box>
-      {/* <Typography
-          sx={{ fontSize: "1.2rem", color: "blue", fontWeight: "bold", marginLeft:'3rem'}}
-        >
-          Creators
-        </Typography>
-        <Footer>
-      
-        </Footer> */}
-      </Box>
-    </Stack>
+     
+      </Box> */}
+
+</>
+
   );
 };
 
