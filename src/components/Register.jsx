@@ -10,7 +10,7 @@ const Register = () => {
 
   const handlesign = () => {
     nav("/");
-  };
+  }; 
 
   const handleRegister = (e) => {
     e.preventDefault();
