@@ -20,7 +20,7 @@ const Register = () => {
       sx={{
         width: "100vw",
         height: "100vh",
-        backgroundColor: "#edddc5",
+        backgroundColor: "#7492fc",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
