@@ -7,13 +7,14 @@ import BikeBox from "./BikeBox";
 import CarBox from "./CarBox";
 import EVBox from "./EVBox";
 import Recommendations from "./Recommendations";
-
+import Topbar from "./Topbar";
+import Users from "./Users";
 const Dashboard = () => {
   return (
     <>
     <Stack sx={{ width: "100vw", height:'100vh', backgroundColor:'#28282B' }}>
-    
-    
+    <Topbar/>
+    <Users/>
     </Stack>
       {/* <Box
         sx={{
