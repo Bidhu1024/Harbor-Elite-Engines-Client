@@ -7,7 +7,7 @@ const Users = () => {
     <Box sx={{ display: "flex", justifyContent: "center", width: "100%" }}>
       <Box
         sx={{
-          width: "70%",
+          width: "80%",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -25,7 +25,7 @@ const Users = () => {
           <Box>
             <Typography fontSize="1rem" color="whitesmoke">
               Welcome to Harbor Elite Engines.
-            </Typography>{" "}
+            </Typography>
           </Box>
         </Box>
         <Box>
