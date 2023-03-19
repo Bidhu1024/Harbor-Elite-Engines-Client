@@ -18,8 +18,8 @@ const Users = () => {
       >
         <Box sx={{ display: "flex", flexDirection: "column" }}>
           <Box>
-            <Typography fontSize="3rem" color="whitesmoke">
-              Hey USERNAME
+            <Typography fontSize="2rem" color="whitesmoke">
+              Hey user
             </Typography>
           </Box>
           <Box>
