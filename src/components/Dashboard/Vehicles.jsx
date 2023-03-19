@@ -1,6 +1,8 @@
 import { Box,Typography } from "@mui/material";
 import React from "react";
-
+import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+import ElectricCarIcon from '@mui/icons-material/ElectricCar';
 const Vehicles = () => {
   return (
     <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
@@ -16,22 +18,22 @@ const Vehicles = () => {
         }}
       >
         <Box sx={{ height: "8rem", width: "33%", backgroundColor: "#36454f", display:'flex', alignItems:'center', justifyContent:'center' }}>
-          <Typography>BikeBox</Typography>
+          <Typography sx={{marginRight:'4px'}}>Bikes</Typography> <TwoWheelerIcon  />
         </Box>
         <Box sx={{ height: "8rem", width: "33%", backgroundColor: "#36454f", display:'flex', alignItems:'center', justifyContent:'center' }}>
-          <Typography>BikeBox</Typography>
+          <Typography sx={{marginRight:'4px'}}>Cars</Typography><DirectionsCarIcon />
         </Box>
         <Box sx={{ height: "8rem", width: "33%", backgroundColor: "#36454f", display:'flex', alignItems:'center', justifyContent:'center' }}>
-          <Typography>BikeBox</Typography>
+          <Typography sx={{marginRight:'4px'}}>Electric Vehicles</Typography><ElectricCarIcon />
         </Box>
         <Box sx={{ height: "8rem", width: "33%", backgroundColor: "#36454f", display:'flex', alignItems:'center', justifyContent:'center' }}>
-          <Typography>BikeBox</Typography>
+          <Typography>New Launches</Typography>
         </Box>
         <Box sx={{ height: "8rem", width: "33%", backgroundColor: "#36454f", display:'flex', alignItems:'center', justifyContent:'center' }}>
-          <Typography>BikeBox</Typography>
+          <Typography>Trendings</Typography>
         </Box>
         <Box sx={{ height: "8rem", width: "33%", backgroundColor: "#36454f", display:'flex', alignItems:'center', justifyContent:'center' }}>
-          <Typography>BikeBox</Typography>
+          <Typography>Stats</Typography>
         </Box>
       </Box>
     </Box>
