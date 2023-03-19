@@ -5,7 +5,7 @@ import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import ElectricCarIcon from "@mui/icons-material/ElectricCar";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 const Vehicles = () => {
   const nav = useNavigate()
   const handleBike =()=>{
@@ -17,6 +17,10 @@ const Vehicles = () => {
       }
       const handleEV = ()=>{
         nav('/allevs')
+      }
+
+      const handleNew = ()=>{
+        <Link to={{ pathname: "https://www.carwale.com/new-car-launches/" }} target="_blank"/>
       }
   return (
     <Box sx={{ width: "100%", display: "flex", justifyContent: "center"}}>
@@ -87,7 +91,7 @@ const Vehicles = () => {
           <ElectricCarIcon sx={{ color: "yellow" }} />
         </Box>
 
-        
+   
         <Box
           sx={{
             height: "8rem",
@@ -97,11 +101,17 @@ const Vehicles = () => {
             alignItems: "center",
             justifyContent: "center",
           }}
+           
+          onClick={handleNew}
         >
-          <Typography fontSize="1.2rem" color="white">
-            New Launches 2023
+       <a href="https://www.carwale.com/new-car-launches/">
+          <Typography fontSize="1.2rem" color="white" sx={{textDecoration:'none'}}>
+          New Launches 2023
+            
           </Typography>
+          </a>
         </Box>
+       
         <Box
           sx={{
             height: "8rem",
@@ -112,11 +122,14 @@ const Vehicles = () => {
             justifyContent: "center",
           }}
         >
-          <Typography fontSize="1.2rem" color="white">
+         <a href="https://www.autocarindia.com/">
+          <Typography fontSize="1.2rem" color="white" sx={{textDecoration:'none'}}>
             Trendings
           </Typography>
+          </a>
           <TrendingUpIcon sx={{ color: "red" }} />
         </Box>
+
         <Box
           sx={{
             height: "8rem",
@@ -127,9 +140,11 @@ const Vehicles = () => {
             justifyContent: "center",
           }}
         >
+        <a href="https://www.marklines.com/en/statistics/flash_sales/automotive-sales-in-india-by-month">
           <Typography fontSize="1.2rem" color="white">
             Stats
           </Typography>
+          </a>
           <QueryStatsIcon sx={{ color: "red" }} />
         </Box>
       </Box>
