@@ -1,6 +1,8 @@
 import { Box, Typography, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios"
+import { useMutation } from 'react-query';
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -14,6 +16,7 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
+    useMutation
   };
   return (
     <Box
