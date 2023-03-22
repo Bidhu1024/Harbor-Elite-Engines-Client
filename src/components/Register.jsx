@@ -16,7 +16,7 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    useMutation
+    
   };
   return (
     <Box
