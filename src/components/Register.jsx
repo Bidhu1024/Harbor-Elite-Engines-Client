@@ -15,7 +15,7 @@ const Register = () => {
   }; 
 
   const handleRegister = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     
   };
   return (
