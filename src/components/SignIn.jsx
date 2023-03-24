@@ -3,13 +3,13 @@ import React, { useState } from "react";
 import loginlogo from "../Assets/super-bike-like-kawasaki.jpg";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useMutation } from 'react-query';
+import { useMutation } from "react-query";
 
 const SignIn = () => {
   const nav = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [token,setToken] = useState("")
+
   const handleRegister = () => {
     nav("/register");
   };
@@ -22,7 +22,7 @@ const SignIn = () => {
     };
 
     try {
-     await axios
+      await axios
         .post("/auth/login", payload, {
           headers: {
             "Content-Type": "application/json",
@@ -32,9 +32,8 @@ const SignIn = () => {
           console.log(res);
         })
         .catch((err) => console.log(err));
-        // setToken(response.data.token)
 
-        nav('/dashboard')
+      nav("/dashboard");
     } catch (error) {
       console.log(error);
     }
