@@ -2,17 +2,48 @@ import { Box, Typography, TextField, Button } from "@mui/material";
 import React, { useState } from "react";
 import loginlogo from "../Assets/super-bike-like-kawasaki.jpg";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useMutation } from 'react-query';
 
 const SignIn = () => {
   const nav = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [token,setToken] = useState("")
   const handleRegister = () => {
     nav("/register");
   };
-  const handleSignIn = (e) => {
+  const handleSignIn = async (e) => {
     e.preventDefault();
+
+    const payload = {
+      email,
+      password,
+    };
+
+    try {
+     await axios
+        .post("/auth/login", payload, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => console.log(err));
+        // setToken(response.data.token)
+
+        nav('/dashboard')
+    } catch (error) {
+      console.log(error);
+    }
   };
+
+  const { data, isLoading, onSuccess, status } = useMutation(
+    "signin",
+    handleSignIn
+  );
   return (
     <Box
       sx={{
