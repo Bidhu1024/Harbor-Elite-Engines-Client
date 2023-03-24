@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useMutation } from "react-query";
+import Stack from "@mui/material/Stack";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert, { AlertProps } from "@mui/material/Alert";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -32,20 +35,22 @@ const Register = () => {
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
 
-        alert(`you have successfully been registered. Please SignIn to continue`)
-         nav('/')
+      alert(`you have successfully been registered. Please SignIn to continue`);
+      nav("/");
     } catch (error) {
       console.log(error);
     }
   };
 
-  const { data, isLoading,onSuccess,status } = useMutation("register", handleRegister);
+  const { data, isLoading, onSuccess, status } = useMutation(
+    "register",
+    handleRegister
+  );
 
   if (data) {
     console.log(data);
   }
-  if(onSuccess){
-    
+  if (onSuccess) {
   }
   return (
     <Box
