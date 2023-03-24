@@ -30,10 +30,11 @@ const SignIn = () => {
         })
         .then((res) => {
           console.log(res);
+          nav("/dashboard");
         })
         .catch((err) => console.log(err));
 
-      nav("/dashboard");
+      
     } catch (error) {
       console.log(error);
     }
@@ -43,6 +44,10 @@ const SignIn = () => {
     "signin",
     handleSignIn
   );
+
+  if(data){
+    console.log(data);
+  }
   return (
     <Box
       sx={{

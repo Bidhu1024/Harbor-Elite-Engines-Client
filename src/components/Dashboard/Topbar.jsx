@@ -2,7 +2,13 @@ import { Box } from "@mui/material";
 import React from "react";
 import Logo from "../../Assets/Logo.png";
 import { Typography } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 const Topbar = () => {
+const nav  = useNavigate()
+  const handleLogout = ()=>{
+    localStorage.removeItem('jwtToken');
+    nav('/')
+  }
   return (
     <Box
       sx={{ width: "100%", display: "flex", justifyContent: "space-between", boxShadow:1 }}
@@ -18,8 +24,8 @@ const Topbar = () => {
         </Box>
       </Box>
       <Box sx={{ padding: "10px" }}>
-        <Typography fontSize="1.4rem" color="white">
-          Admin
+        <Typography fontSize="1.4rem" color="white" onClick={handleLogout}>
+          Logout
         </Typography>
       </Box>
     </Box>
