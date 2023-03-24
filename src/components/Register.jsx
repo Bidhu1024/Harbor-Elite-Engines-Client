@@ -24,22 +24,28 @@ const Register = () => {
 
     try {
       await axios
-        .post("/api/auth/register", data, {
+        .post("/auth/register", data, {
           headers: {
             "Content-Type": "application/json",
           },
         })
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
+
+        alert(`you have successfully been registered. Please SignIn to continue`)
+         nav('/')
     } catch (error) {
       console.log(error);
     }
   };
 
-  const { data, isLoading } = useMutation("register", handleRegister);
+  const { data, isLoading,onSuccess,status } = useMutation("register", handleRegister);
 
   if (data) {
     console.log(data);
+  }
+  if(onSuccess){
+    
   }
   return (
     <Box
