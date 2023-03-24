@@ -1,8 +1,8 @@
 import { Box, Typography, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios"
-import { useMutation } from 'react-query';
+import axios from "axios";
+import { useMutation } from "react-query";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -12,12 +12,35 @@ const Register = () => {
 
   const handlesign = () => {
     nav("/");
-  }; 
-
-  const handleRegister = (e) => {
-    e.preventDefault()
-    
   };
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    const data = {
+      username: name,
+      email: email,
+      password: password,
+    };
+
+    try {
+      await axios
+        .post("/api/auth/register", data, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const { data, isLoading } = useMutation("register", handleRegister);
+
+  if (data) {
+    console.log(data);
+  }
   return (
     <Box
       sx={{

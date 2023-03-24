@@ -56,7 +56,7 @@ const BikeAdmin = () => {
         })
         .then((res) => console.log(res))
         .catch((error) => console.log(error));
-      console.log(list);
+     
     } catch (err) {
       console.log(err);
     }
