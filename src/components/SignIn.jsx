@@ -7,7 +7,7 @@ import { useMutation } from "react-query";
 
 const SignIn = () => {
   const nav = useNavigate();
-  const [email, setEmail] = useState("");
+  const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
   const handleRegister = () => {
@@ -17,7 +17,7 @@ const SignIn = () => {
     e.preventDefault();
 
     const payload = {
-      email,
+      username,
       password,
     };
 
@@ -33,8 +33,6 @@ const SignIn = () => {
           nav("/dashboard");
         })
         .catch((err) => console.log(err));
-
-      
     } catch (error) {
       console.log(error);
     }
@@ -45,7 +43,7 @@ const SignIn = () => {
     handleSignIn
   );
 
-  if(data){
+  if (data) {
     console.log(data);
   }
   return (
@@ -93,8 +91,8 @@ const SignIn = () => {
                 Email
               </Typography>
               <TextField
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={username}
+                onChange={(e) => setUserName(e.target.value)}
                 size="small"
                 sx={{ width: "24rem", marginTop: ".6rem" }}
               />
