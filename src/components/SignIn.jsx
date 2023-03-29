@@ -38,7 +38,7 @@ const SignIn = () => {
     }
   };
 
-  const { data, isLoading, onSuccess, status } = useMutation(
+  const { data} = useMutation(
     "signin",
     handleSignIn
   );
