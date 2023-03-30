@@ -41,8 +41,7 @@ const Register = () => {
       console.log(error);
     }
   };
-
-  const { data, isLoading, onSuccess, status } = useMutation(
+ const { data, isLoading, onSuccess, status } = useMutation(
     "register",
     handleRegister
   );
