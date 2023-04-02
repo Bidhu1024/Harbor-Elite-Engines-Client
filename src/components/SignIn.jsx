@@ -88,7 +88,7 @@ const SignIn = () => {
           <form action="">
             <Box sx={{ display: "flex", flexDirection: "column" }}>
               <Typography fontSize="1.2rem" color="gray">
-                Email
+                UserName
               </Typography>
               <TextField
                 value={username}

@@ -23,7 +23,7 @@ const nav  = useNavigate()
           </Typography>
         </Box>
       </Box>
-      <Box sx={{ padding: "10px" }}>
+      <Box sx={{ padding: "10px", cursor:'pointer' }}>
         <Typography fontSize="1.4rem" color="white" onClick={handleLogout}>
           Logout
         </Typography>
