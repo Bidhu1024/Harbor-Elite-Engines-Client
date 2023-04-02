@@ -1,7 +1,3 @@
-
-
-
-
 ## Master
 -- Add Recommedation on Dashboard
 -- Add a Top Bike
