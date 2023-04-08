@@ -35,7 +35,10 @@ const Register = () => {
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
 
-      alert(`you have successfully been registered. Please SignIn to continue`);
+      // alert(`you have successfully been registered. Please SignIn to continue`);
+
+
+      // add a mui snackbar instead of a alert
       nav("/");
     } catch (error) {
       console.log(error);
